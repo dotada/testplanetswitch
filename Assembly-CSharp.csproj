@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\moveandlookaround.cs" />
+     <Compile Include="Assets\jump.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\unity\2021.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

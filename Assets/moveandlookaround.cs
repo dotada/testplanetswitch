@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class moveandlookaround : MonoBehaviour
 {
-	private bool isGrounded = false;
 	private Rigidbody rb;
 	public float sensitivity = 5.0f;
 	public float minYangle = -90.0f;
@@ -13,7 +12,7 @@ public class moveandlookaround : MonoBehaviour
 	private float rotationY = 0.0f;
 	private Camera playerCam;
 	public float speed = 5.0f;
-    // Start is called before the first frame update
+	
     void Start()
     {
 		rb = GetComponent<Rigidbody>();
@@ -21,21 +20,6 @@ public class moveandlookaround : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
     }
 
-	void OnCollisionEnter(Collision other) {
-    	if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-        	// Player is touching ground
-        	isGrounded = true;
-    	}
-	}
-
-	void OnCollisionExit(Collision other) {
-    	if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-        	// Player is not touching ground
-        	isGrounded = false;
-    	}
-	}
-
-    // Update is called once per frame
     void Update()
     {
 		rotationX += Input.GetAxis("Mouse X") * sensitivity;
