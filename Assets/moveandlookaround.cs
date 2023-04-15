@@ -43,14 +43,7 @@ public class moveandlookaround : MonoBehaviour
         	movement += transform.right;
     	}
 
-    // Move the player based on the input values
-    transform.position += movement.normalized * speed * Time.deltaTime;
+    	// Move the player based on the input values
+    	transform.position += movement.normalized * speed * Time.deltaTime;
     }
-
-	void OnCollisionStay(Collision other) {
-    	if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-        	// Set the Y force to 0
-        	GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z);
-    	}
-	}
 }

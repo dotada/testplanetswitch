@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class jump : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float jumpForce = 25f;
+    public Rigidbody rb;
+    private bool isGrounded = true;
+	public LayerMask groundLayer;
+	private float distToGround;
+	public Collider collidere;
+	void Start() {
+		distToGround = collidere.bounds.extents.y;
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+		isGrounded = Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+		Debug.Log("isGrounded: " + isGrounded);
+        // Jump if grounded
+        if (Input.GetKey(KeyCode.Space) && isGrounded) {
+			rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+			isGrounded = false;
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        }
     }
 }
+
