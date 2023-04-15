@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\moveandlookaround.cs" />
      <Compile Include="Assets\jump.cs" />
+     <Compile Include="Assets\teleport.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\unity\2021.3.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -730,6 +731,15 @@
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
         <HintPath>J:\shittygame\testplanetswitch\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Sysroot.Linux_x86_64">
+        <HintPath>J:\shittygame\testplanetswitch\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
+        <HintPath>J:\shittygame\testplanetswitch\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.SysrootPackage.Editor">
+        <HintPath>J:\shittygame\testplanetswitch\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
