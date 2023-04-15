@@ -446,6 +446,7 @@ GameObject:
   - component: {fileID: 839042733}
   - component: {fileID: 839042734}
   - component: {fileID: 839042735}
+  - component: {fileID: 839042736}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -596,6 +597,23 @@ MonoBehaviour:
   rb: {fileID: 839042732}
   planetnewtp: {fileID: 6471522}
   cubetp: {fileID: 1908315102}
+--- !u!114 &839042736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839042727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62b6c618dfc19e4eada187ea7d38ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityDistance: 100
+  gravityStrength: 10
+  gravityLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1062565644
 GameObject:
   m_ObjectHideFlags: 0
