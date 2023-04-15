@@ -47,6 +47,9 @@ public class moveandlookaround : MonoBehaviour
     	if (Input.GetKey(KeyCode.D)) {
         	movement += transform.right;
     	}
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			Application.Quit();
+		}
 
     	// Move the player based on the input values
     	transform.position += movement.normalized * speed * Time.deltaTime;
