@@ -9,6 +9,7 @@ public class teleport : MonoBehaviour
 	public Rigidbody rb;
 	public GameObject planetnewtp;
 	public GameObject cubetp;
+	
     // Start is called before the first frame update
     void Start()
     {

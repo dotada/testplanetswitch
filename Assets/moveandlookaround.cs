@@ -12,12 +12,17 @@ public class moveandlookaround : MonoBehaviour
 	private float rotationY = 0.0f;
 	private Camera playerCam;
 	public float speed = 5.0f;
+	public float jumpForce;
+    private bool isGrounded = true;
+	private float distToGround;
+	public Collider collidere;
 	
     void Start()
     {
 		rb = GetComponent<Rigidbody>();
 		playerCam = transform.Find("Playercam").GetComponent<Camera>();
 		Cursor.lockState = CursorLockMode.Locked;
+		distToGround = collidere.bounds.extents.y;
     }
 
     void Update()
@@ -45,5 +50,14 @@ public class moveandlookaround : MonoBehaviour
 
     	// Move the player based on the input values
     	transform.position += movement.normalized * speed * Time.deltaTime;
+
+		isGrounded = Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+		Debug.Log("isGrounded: " + isGrounded);
+        // Jump if grounded
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+			rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+			isGrounded = false;
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 }

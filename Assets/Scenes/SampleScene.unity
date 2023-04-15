@@ -444,7 +444,6 @@ GameObject:
   - component: {fileID: 839042728}
   - component: {fileID: 839042732}
   - component: {fileID: 839042733}
-  - component: {fileID: 839042734}
   - component: {fileID: 839042735}
   m_Layer: 0
   m_Name: Player
@@ -565,20 +564,7 @@ MonoBehaviour:
   minYangle: -90
   maxYangle: 90
   speed: 5
---- !u!114 &839042734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839042727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba7d9f68c79427f4b9dc37b8ccc76e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   jumpForce: 5
-  rb: {fileID: 839042732}
   collidere: {fileID: 839042728}
 --- !u!114 &839042735
 MonoBehaviour:
